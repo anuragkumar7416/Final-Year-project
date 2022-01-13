@@ -45,6 +45,7 @@
                     android:src="@drawable/ic_email"
                     app:tint="@color/purple_500" />
                 <EditText
+                    android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:backgroundTint="@null"
@@ -98,6 +99,7 @@
                     android:src="@drawable/ic_password"
                     app:tint="@color/purple_500" />
                 <EditText
+                    android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:backgroundTint="@null"
@@ -141,6 +143,7 @@
             android:textSize="16sp"/>
 
         <Button
+            android:id="@+id/btSignIn"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="30dp"

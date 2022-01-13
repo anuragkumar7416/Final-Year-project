@@ -11,11 +11,13 @@
         android:theme="@style/Theme.FinalYearProject">
         <activity
             android:name=".SignIn"
-            android:exported="false">
+            android:exported="true">
+
         </activity>
         <activity
             android:name=".CreateAccount"
-            android:exported="false" />
+            android:exported="true">
+        </activity>>
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -24,6 +26,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 
