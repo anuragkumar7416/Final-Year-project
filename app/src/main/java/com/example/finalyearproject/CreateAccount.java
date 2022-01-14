@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -54,6 +55,8 @@ public class CreateAccount extends AppCompatActivity {
                             database.getReference().child("Mentees").child(id).setValue(mentee);
 
                             Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(CreateAccount.this,SignIn.class);
+                            startActivity(intent);
 
                         } else {
 
