@@ -31,6 +31,14 @@ public class firstPage extends AppCompatActivity {
             }
         });
 
+        binding.btMentor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(firstPage.this,Mentor_SignIn.class);
+                startActivity(intent);
+            }
+        });
+
         if(auth.getCurrentUser()!=null){
             Intent intent = new Intent(firstPage.this,MainActivity.class);
             startActivity(intent);
