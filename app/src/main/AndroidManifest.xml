@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.finalyearproject">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,26 +11,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalYearProject">
         <activity
-            android:name=".SignIn"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".CreateAccount"
+            android:name=".firstPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>>
+        </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".SignIn"
+            android:exported="true"></activity>
+        <activity
+            android:name=".CreateAccount"
             android:exported="true">
 
-
-
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

@@ -55,8 +55,7 @@ public class CreateAccount extends AppCompatActivity {
                             database.getReference().child("Mentees").child(id).setValue(mentee);
 
                             Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(CreateAccount.this,SignIn.class);
-                            startActivity(intent);
+
 
                         } else {
 
@@ -65,6 +64,14 @@ public class CreateAccount extends AppCompatActivity {
                         }
                     }
                 });
+            }
+        });
+
+        binding.goToSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CreateAccount.this,SignIn.class);
+                startActivity(intent);
             }
         });
     }
