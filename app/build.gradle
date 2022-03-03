@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.finalyearproject"
-        minSdk 21
+        minSdk 23
         targetSdk 31
         versionCode 1
         versionName "1.0"
@@ -55,4 +55,6 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'io.agora.uikit:agorauikit:2.0.1'
+    implementation ('org.jitsi.react:jitsi-meet-sdk:3.+') { transitive = true }
 }

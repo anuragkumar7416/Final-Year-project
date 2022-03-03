@@ -21,7 +21,6 @@
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_create_account.xml" value="0.22" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_first_page.xml" value="0.215625" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_mentor_sign_in.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_menu2.xml" value="0.33" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_sign_in.xml" value="0.25" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/fragment_account.xml" value="0.215625" />
@@ -31,6 +30,17 @@
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/view_sample.xml" value="0.22" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/menu/menu_item.xml" value="0.16" />
+        <entry key="..\:/Users/chhay/StudioProjects/Final-Year-project/app/src/main/res/drawable/ic_google.xml" value="0.236" />
+        <entry key="..\:/Users/chhay/StudioProjects/Final-Year-project/app/src/main/res/layout/activity_main.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/chhay/StudioProjects/Final-Year-project/app/src/main/res/layout/activity_mentor_home.xml" value="0.152" />
+        <entry key="..\:/Users/chhay/StudioProjects/Final-Year-project/app/src/main/res/layout/activity_mentor_sign_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/chhay/StudioProjects/Final-Year-project/app/src/main/res/layout/activity_sign_in.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/chhay/StudioProjects/Final-Year-project/app/src/main/res/layout/fragment_categories.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/chhay/StudioProjects/Final-Year-project/app/src/main/res/layout/fragment_first.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/chhay/StudioProjects/Final-Year-project/app/src/main/res/layout/fragment_home.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/chhay/StudioProjects/Final-Year-project/app/src/main/res/layout/fragment_mentor_profile.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/chhay/StudioProjects/Final-Year-project/app/src/main/res/layout/fragment_mentorsfragment.xml" value="0.264" />
+        <entry key="..\:/Users/chhay/StudioProjects/Final-Year-project/app/src/main/res/layout/fragment_second.xml" value="0.24547101449275363" />
       </map>
     </option>
   </component>
