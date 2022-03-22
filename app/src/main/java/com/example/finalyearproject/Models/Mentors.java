@@ -2,7 +2,16 @@ package com.example.finalyearproject.Models;
 
 public class Mentors {
 
-    String name, phoneNo,email,password, profilePic,workBackground;
+    String name, phoneNo,email,password, profilePic,workBackground,userId;
+
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
     public int getImage_id() {
         return image_id;
@@ -18,6 +27,8 @@ public class Mentors {
         this.name = name;
         this.image_id = image_id;
         this.workBackground = workBackground;
+        this.userId = userId;
+
     }
 
     public String getName() {

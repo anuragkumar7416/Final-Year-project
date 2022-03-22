@@ -31,7 +31,8 @@
                 android:layout_height="wrap_content"
                 android:iconifiedByDefault="false"
                 android:queryBackground="@android:color/transparent"
-                android:queryHint="Search for new mentors" />
+                android:queryHint="Search for new mentor"
+                android:focusable="false"/>
         </androidx.cardview.widget.CardView>
 
 

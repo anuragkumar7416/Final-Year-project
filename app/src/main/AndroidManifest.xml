@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,10 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalYearProject">
         <activity
+            android:name=".Chat_Detail"
+            android:exported="false" />
+        <activity
             android:name=".Mentor_Home"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Mentor_SignIn"
             android:exported="true" />
@@ -28,7 +28,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".SignIn"

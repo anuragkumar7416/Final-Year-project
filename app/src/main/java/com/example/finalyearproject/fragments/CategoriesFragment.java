@@ -3,64 +3,61 @@ package com.example.finalyearproject.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.finalyearproject.Adapter.chatAdapter;
+import com.example.finalyearproject.Adapter.recyclerViewAdapter;
+import com.example.finalyearproject.Models.Mentors;
 import com.example.finalyearproject.R;
+import com.example.finalyearproject.databinding.FragmentCategoriesBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CategoriesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
+
 public class CategoriesFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public CategoriesFragment() {
         // Required empty public constructor
     }
+    FragmentCategoriesBinding binding;
+    ArrayList<Mentors> list = new ArrayList<>();
+    FirebaseAuth auth;
+    FirebaseDatabase database;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CategoriesFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static CategoriesFragment newInstance(String param1, String param2) {
-        CategoriesFragment fragment = new CategoriesFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        binding = FragmentCategoriesBinding.inflate(inflater,container,false);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_categories, container, false);
+        chatAdapter adapter = new chatAdapter(list);
+        binding.chatRecView.setAdapter(adapter);
+
+
+        binding.chatRecView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        list.add(new Mentors("Ashneer Grover",R.drawable.ashneer_grover,"Founder of Bharatpe"));
+        list.add(new Mentors("Vineeta Singh",R.drawable.vineeta_singh,"Founder & CEO of Sugar Cosmetics"));
+        list.add(new Mentors("Ratan tata",R.drawable.ratan_tata,"Business Man & Co-founder of Tata Motors"));
+        list.add(new Mentors("Peyush Bansal",R.drawable.peyush_bansal,"Founder of Lenskart"));
+        list.add(new Mentors("Falguni Nayar",R.drawable.falguni_nayar,"Founder of Nyakaa"));
+        list.add(new Mentors("Jhonny",R.drawable.profile,"UI/UX Designer works at Unsplash"));
+
+
+
+
+        return binding.getRoot();
     }
 }

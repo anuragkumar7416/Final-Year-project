@@ -73,9 +73,10 @@ public class AccountFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 mentees mentee = snapshot.getValue(mentees.class);
-                Picasso.get()
-                        .load(mentee.getProfilePic())
-                        .into(binding.profileImageView);
+//                Picasso.get()
+//                        .load(mentee.getProfilePic())
+//                        .into(binding.profileImageView);
+                Glide.with(getContext()).load(mentee.getProfilePic()).into(binding.profileImageView);
 
                 binding.userEmail.setText(mentee.getEmail());
                 binding.userPhoneNo.setText(mentee.getPhoneNo());

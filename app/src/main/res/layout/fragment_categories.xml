@@ -3,24 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.CategoriesFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.CategoriesFragment"
+    android:background="@color/white">
 
     <!-- TODO: Update blank fragment layout -->
 
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/categories"
-        android:gravity="center"
-        android:text="This is Category fragment"
-        android:textSize="30dp" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </RelativeLayout>
-
-
+        android:layout_height="match_parent" />
 </FrameLayout>
