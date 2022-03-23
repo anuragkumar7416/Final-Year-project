@@ -13,16 +13,22 @@
         android:theme="@style/Theme.FinalYearProject">
         <activity
             android:name=".Chat_Detail"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Mentor_Home"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait"
+
+            />
         <activity
             android:name=".Mentor_SignIn"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".firstPage"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,13 +37,16 @@
         </activity>
         <activity
             android:name=".SignIn"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".CreateAccount"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

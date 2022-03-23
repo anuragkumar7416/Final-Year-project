@@ -20,8 +20,9 @@ public class chatAdapter extends RecyclerView.Adapter<chatViewHolder> {
     ArrayList<Mentors> list = new ArrayList<>();
     Context context;
 
-    public chatAdapter(ArrayList<Mentors> list) {
+    public chatAdapter(ArrayList<Mentors> list, Context context) {
         this.list = list;
+        this.context = context;
     }
     @NonNull
     @Override

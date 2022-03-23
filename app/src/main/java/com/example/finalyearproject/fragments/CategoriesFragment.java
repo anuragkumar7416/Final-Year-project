@@ -42,7 +42,7 @@ public class CategoriesFragment extends Fragment {
         binding = FragmentCategoriesBinding.inflate(inflater,container,false);
 
         // Inflate the layout for this fragment
-        chatAdapter adapter = new chatAdapter(list);
+        chatAdapter adapter = new chatAdapter(list,getContext());
         binding.chatRecView.setAdapter(adapter);
 
 

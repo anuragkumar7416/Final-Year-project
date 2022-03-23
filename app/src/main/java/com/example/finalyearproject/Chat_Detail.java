@@ -24,6 +24,7 @@ public class Chat_Detail extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
+        getSupportActionBar().hide();
 
         String senderId = auth.getUid();
         String receiverId = getIntent().getStringExtra("userId");
@@ -31,6 +32,6 @@ public class Chat_Detail extends AppCompatActivity {
         String profilePic = getIntent().getStringExtra("userPic");
 
         binding.userName.setText(userName);
-        Picasso.get().load(profilePic).placeholder(R.drawable.user).into(binding.profileImage);
+        Picasso.get().load(profilePic).placeholder(R.drawable.user).into(binding.profilePic);
     }
 }
