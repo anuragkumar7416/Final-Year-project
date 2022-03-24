@@ -98,7 +98,7 @@ public class AccountFragment extends Fragment {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
-                startActivityForResult(intent,45);
+                startActivityForResult(intent,57);
             }
         });
 

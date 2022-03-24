@@ -51,9 +51,8 @@ public class HomeFragment extends Fragment {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         mentees mentee = snapshot.getValue(mentees.class);
-                        if (mentee.getName()!=null) {
                             binding.displayUserName.setText(mentee.getName());
-                        }
+
                     }
 
                     @Override

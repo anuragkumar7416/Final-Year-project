@@ -39,10 +39,10 @@ public class firstPage extends AppCompatActivity {
             }
         });
 
-        if(auth.getCurrentUser()!=null){
-            Intent intent = new Intent(firstPage.this,MainActivity.class);
-            startActivity(intent);
-        }
+//        if(auth.getCurrentUser()!=null){
+//            Intent intent = new Intent(firstPage.this,MainActivity.class);
+//            startActivity(intent);
+//        }
     }
 
 }
