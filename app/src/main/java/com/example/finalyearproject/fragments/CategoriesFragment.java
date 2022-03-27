@@ -48,12 +48,17 @@ public class CategoriesFragment extends Fragment {
 
         binding.chatRecView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
+
+
+
         list.add(new Mentors("Ashneer Grover",R.drawable.ashneer_grover,"Founder of Bharatpe"));
         list.add(new Mentors("Vineeta Singh",R.drawable.vineeta_singh,"Founder & CEO of Sugar Cosmetics"));
         list.add(new Mentors("Ratan tata",R.drawable.ratan_tata,"Business Man & Co-founder of Tata Motors"));
         list.add(new Mentors("Peyush Bansal",R.drawable.peyush_bansal,"Founder of Lenskart"));
         list.add(new Mentors("Falguni Nayar",R.drawable.falguni_nayar,"Founder of Nyakaa"));
         list.add(new Mentors("Jhonny",R.drawable.profile,"UI/UX Designer works at Unsplash"));
+
+
 
 
 

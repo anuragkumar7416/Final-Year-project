@@ -14,6 +14,7 @@ public class Chat_Detail extends AppCompatActivity {
     ActivityChatDetailBinding binding;
     FirebaseDatabase database;
     FirebaseAuth auth;
+    int imagevalue;
 
 
     @Override
@@ -26,12 +27,20 @@ public class Chat_Detail extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         getSupportActionBar().hide();
 
-        String senderId = auth.getUid();
-        String receiverId = getIntent().getStringExtra("userId");
+//        String senderId = auth.getUid();
+//        String receiverId = getIntent().getStringExtra("userId");
         String userName = getIntent().getStringExtra("userName");
-        String profilePic = getIntent().getStringExtra("userPic");
+        Bundle bundle = getIntent().getExtras();
 
-        binding.userName.setText(userName);
-        Picasso.get().load(profilePic).placeholder(R.drawable.user).into(binding.profilePic);
+        // if bundle is not null then get the image value
+        if (bundle != null) {
+            int image_value = bundle.getInt("userPic");
+            binding.profilePic.setImageResource(image_value);
+        }
+       // binding.profilePic.setImageResource(imagevalue);
+      //  String profilePic = getIntent().getStringExtra("userPic");
+
+       binding.userName.setText(userName);
+       // Picasso.get().load(profilePic).placeholder(R.drawable.user).into(binding.profilePic);
     }
 }

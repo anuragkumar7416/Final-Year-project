@@ -36,6 +36,7 @@ public class SignIn extends AppCompatActivity {
     ProgressDialog progressDialog;
     GoogleSignInClient mGoogleSignInClient;
     FirebaseDatabase database;
+    FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,9 +65,19 @@ public class SignIn extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
                                     progressDialog.dismiss();
-                                    Intent intent = new Intent(SignIn.this,MainActivity.class);
-                                    startActivity(intent);
-                                    finish();
+                                    firebaseUser = auth.getCurrentUser();
+                                    Boolean flag = firebaseUser.isEmailVerified();
+                                    if(flag){
+                                        Intent intent = new Intent(SignIn.this,MainActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }
+                                    else{
+                                        Toast.makeText(getApplicationContext(), "Your email is not verified!!.Please verify your Email", Toast.LENGTH_LONG).show();
+                                        startActivity(new Intent(SignIn.this,VerificationEmail.class));
+                                    }
+
+
 
                                 } else {
 

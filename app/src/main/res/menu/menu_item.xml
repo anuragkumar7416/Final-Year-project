@@ -11,8 +11,8 @@
         android:title="My Mentors"/>
  <item
         android:id="@+id/categories"
-        android:icon="@drawable/ic_categories"
-        android:title="Categories"/>
+        android:icon="@drawable/ic_baseline_chat"
+        android:title="Chats"/>
  <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_baseline_account_circle_24"
