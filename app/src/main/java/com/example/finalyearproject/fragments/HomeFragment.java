@@ -61,20 +61,17 @@ public class HomeFragment extends Fragment {
                     }
                 });
 
-        recyclerViewAdapter adapter = new recyclerViewAdapter(list);
+        recyclerViewAdapter adapter = new recyclerViewAdapter(list,getContext());
         binding.recHome.setAdapter(adapter);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
         binding.recHome.setLayoutManager(linearLayoutManager);
-
-        list.add(new Mentors("Ashneer Grover",R.drawable.ashneer_grover,"Founder of Bharatpe"));
-        list.add(new Mentors("Vineeta Singh",R.drawable.vineeta_singh,"Founder & CEO of Sugar Cosmetics"));
-        list.add(new Mentors("Ratan tata",R.drawable.ratan_tata,"Business Man & Co-founder of Tata Motors"));
-        list.add(new Mentors("Peyush Bansal",R.drawable.peyush_bansal,"Founder of Lenskart"));
-        list.add(new Mentors("Falguni Nayar",R.drawable.falguni_nayar,"Founder of Nyakaa"));
-        list.add(new Mentors("Jhonny",R.drawable.profile,"UI/UX Designer works at Unsplash"));
-
-
+        list.add(new Mentors("Ashneer Grover",R.drawable.ashneer_grover,"Ashneer Grover was born in Delhi, India on 14 June 1982. He has completed his graduation with Indian Institute of Technology Delhi and Indian Institute of Management Ahmedabad. Before starting the Bharat Pe he has worked in various companies like Kotak Investment Bank, Grofers, PC Jeweller Ltd and American Express. Bharat Pe, the payment application was launched by Ashneer Grover in 2018, since then the application is in use. At present the application has 1 Crore+ download on Play Store.","ashneer@mentor.com"));
+        list.add(new Mentors("Vineeta Singh",R.drawable.vineeta_singh,"Vineeta Singh is an entrepreneur from India. At Sugar Cosmetics Corp., she is the CEO and co-founder. Additionally, she judged the reality television series Shark Tank India produced by Sony Entertainment Television. Its beauty brand is available in more than 130 cities with more than 35,000 points of sale.","vineetasingh@mentor.com"));
+        list.add(new Mentors("Ratan tata",R.drawable.ratan_tata,"Business Man & Co-founder of Tata Motors Ratan Naval Tata is an Indian industrialist, philanthropist, and a former chairman of Tata Sons. He was also chairman of Tata Group, from 1990 to 2012, and again, as interim chairman, from October 2016 through February 2017, and continues to head its charitable trusts","ratantata@mentor.com"));
+        list.add(new Mentors("Peyush Bansal",R.drawable.peyush_bansal,"Peyush Bansal is the founder and CEO of Lenskart. He is also a judge of the famous Indian Shark Tank.Peyush Bansal’s training for the Honors Bachelor of Engineering course was completed at McGill University, in the Electrical – IT, Control and Automation branch from 2002 to 2006.Peyush Bansal obtained her postgraduate degree in entrepreneurship from IIM Bangalore, which made Peyush Bansal wiki strong enough to start a new business and change his life.","peyush@mentor.com" ));
+        list.add(new Mentors("Falguni Nayar",R.drawable.falguni_nayar,"Falguni Nayar is an Indian businesswoman and billionaire who is the founder and CEO of the beauty and lifestyle retail company Nykaa. Nayar is one of two self-made female, Indian billionaires.","falguninayar@mentor.com"));
+        //list.add(new Mentors("Jhonny",R.drawable.profile,"UI/UX Designer works at Unsplash"));
 
 
 

@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.finalyearproject.Chat_Detail;
+import com.example.finalyearproject.MentorProfile;
 import com.example.finalyearproject.Models.Mentors;
 import com.example.finalyearproject.R;
 
@@ -43,8 +44,10 @@ public class chatAdapter extends RecyclerView.Adapter<chatViewHolder> {
             public void onClick(View v) {
                 Intent intent = new Intent(context, Chat_Detail.class);
                 intent.putExtra("userId",mentors.getUserId());
+                intent.putExtra("userEmail",mentors.getEmail());
                 intent.putExtra("userName",mentors.getName());
-                intent.putExtra("userPic",mentors.getProfilePic());
+                intent.putExtra("workBackground",mentors.getWorkBackground());
+                intent.putExtra("userPic",mentors.getImage_id());
                 context.startActivity(intent);
             }
         });

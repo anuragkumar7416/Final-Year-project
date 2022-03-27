@@ -18,16 +18,29 @@
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_icons8_facebook.xml" value="0.22407407407407406" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.23177083333333334" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/ic_phone.xml" value="0.23177083333333334" />
+<<<<<<< HEAD
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_create_account.xml" value="0.22" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_first_page.xml" value="0.215625" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_main.xml" value="0.25" />
+=======
+        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_chat_detail.xml" value="0.1" />
+        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_create_account.xml" value="0.22" />
+        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_first_page.xml" value="0.215625" />
+        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_mentor_profile.xml" value="0.22" />
+>>>>>>> anurag
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_menu2.xml" value="0.33" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_sign_in.xml" value="0.25" />
+        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_verification_email.xml" value="0.25" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/fragment_account.xml" value="0.215625" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/fragment_categories.xml" value="0.1852355072463768" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/fragment_mentorsfragment.xml" value="0.215625" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+<<<<<<< HEAD
+=======
+        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/sample.xml" value="0.20416666666666666" />
+>>>>>>> anurag
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/view_sample.xml" value="0.22" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/menu/menu_item.xml" value="0.16" />
         <entry key="..\:/Users/chhay/StudioProjects/Final-Year-project/app/src/main/res/drawable/ic_google.xml" value="0.236" />

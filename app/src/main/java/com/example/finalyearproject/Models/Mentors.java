@@ -30,6 +30,14 @@ public class Mentors {
         this.userId = userId;
 
     }
+    public Mentors(String name, int image_id,String workBackground, String email) {
+        this.name = name;
+        this.image_id = image_id;
+        this.workBackground = workBackground;
+        this.email = email;
+
+
+    }
 
     public String getName() {
         return name;
