@@ -3,7 +3,34 @@ package com.example.finalyearproject.Models;
 public class Mentors {
 
     String name, phoneNo,email,password, profilePic,workBackground,userId;
+    int image_id;
 
+    Mentors(){
+
+    }
+
+    public Mentors(String name, String profilePic, String workBackground) {
+        this.name = name;
+        this.workBackground = workBackground;
+        this.profilePic = profilePic;
+    }
+
+
+    public Mentors(String name, int image_id, String workBackground) {
+        this.name = name;
+        this.image_id = image_id;
+        this.workBackground = workBackground;
+        this.userId = userId;
+
+    }
+    public Mentors(String name, int image_id,String workBackground, String email) {
+        this.name = name;
+        this.image_id = image_id;
+        this.workBackground = workBackground;
+        this.email = email;
+
+
+    }
 
     public String getUserId() {
         return userId;
@@ -21,23 +48,6 @@ public class Mentors {
         this.image_id = image_id;
     }
 
-    int image_id;
-
-    public Mentors(String name, int image_id, String workBackground) {
-        this.name = name;
-        this.image_id = image_id;
-        this.workBackground = workBackground;
-        this.userId = userId;
-
-    }
-    public Mentors(String name, int image_id,String workBackground, String email) {
-        this.name = name;
-        this.image_id = image_id;
-        this.workBackground = workBackground;
-        this.email = email;
-
-
-    }
 
     public String getName() {
         return name;
