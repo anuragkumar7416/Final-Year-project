@@ -20,6 +20,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import java.util.ArrayList;
 
 public class chatAdapter extends FirebaseRecyclerAdapter<Mentors,chatViewHolder> {
+
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
      * {@link FirebaseRecyclerOptions} for configuration options.
@@ -35,6 +36,20 @@ public class chatAdapter extends FirebaseRecyclerAdapter<Mentors,chatViewHolder>
         holder.t3.setText(model.getName());
         holder.t4.setText(model.getWorkBackground());
         Glide.with(holder.img1.getContext()).load(model.getProfilePic()).into(holder.img1);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),Chat_Detail.class);
+                //intent.putExtra("userId",model.);
+                //intent.putExtra("userEmail",mentors.getEmail());
+                intent.putExtra("userName",model.getName());
+                intent.putExtra("workBackground",model.getWorkBackground());
+                intent.putExtra("userPic",model.getProfilePic());
+                v.getContext().startActivity(intent);
+            }
+        });
+
 
 
     }
