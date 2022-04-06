@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.finalyearproject.Chat_Detail;
 import com.example.finalyearproject.Models.Message;
 import com.example.finalyearproject.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 
 public class MessageAdapter extends RecyclerView.Adapter {
 
-    ArrayList<Message> messages;
+    ArrayList<Message> messages ;
     Context context;
 
     int SENDER_VIEW_TYPE =1;
@@ -60,6 +61,14 @@ public class MessageAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+        Message message = messages.get(position);
+        if(holder.getClass() == SenderViewHolder.class){
+            ((SenderViewHolder)holder).senderMsg.setText(message.getMessage());
+        }
+        else {
+            ((RecieverViewHolder)holder).recieverMsg.setText(message.getMessage());
+
+        }
 
     }
 
