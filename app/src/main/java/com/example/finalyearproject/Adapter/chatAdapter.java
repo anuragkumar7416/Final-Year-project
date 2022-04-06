@@ -41,7 +41,7 @@ public class chatAdapter extends FirebaseRecyclerAdapter<Mentors,chatViewHolder>
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(),Chat_Detail.class);
-                //intent.putExtra("userId",model.);
+                intent.putExtra("userId",model.getUserId());
                 //intent.putExtra("userEmail",mentors.getEmail());
                 intent.putExtra("userName",model.getName());
                 intent.putExtra("workBackground",model.getWorkBackground());

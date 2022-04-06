@@ -28,8 +28,8 @@ public class Chat_Detail extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         getSupportActionBar().hide();
 
-//        String senderId = auth.getUid();
-//        String receiverId = getIntent().getStringExtra("userId");
+       String senderId = auth.getUid();
+       String receiverId = getIntent().getStringExtra("userId");
         String userName = getIntent().getStringExtra("userName");
        // Bundle bundle = getIntent().getExtras();
 

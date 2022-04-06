@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/bg_recevier.xml" value="0.163" />
+        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/drawable/bg_sender.xml" value="0.163" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/sample.xml" value="0.20416666666666666" />
-        <entry key="app/src/main/res/layout/activity_chat_detail.xml" value="0.10612968591691996" />
+        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/sample_reciever.xml" value="0.1" />
+        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/sample_sender.xml" value="0.15" />
       </map>
     </option>
   </component>

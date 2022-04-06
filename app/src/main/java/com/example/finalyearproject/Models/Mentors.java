@@ -9,10 +9,11 @@ public class Mentors {
 
     }
 
-    public Mentors(String name, String profilePic, String workBackground) {
+    public Mentors(String name, String profilePic, String workBackground,String userId) {
         this.name = name;
         this.workBackground = workBackground;
         this.profilePic = profilePic;
+        this.userId = userId;
     }
 
 
