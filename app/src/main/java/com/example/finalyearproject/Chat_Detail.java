@@ -64,7 +64,7 @@ public class Chat_Detail extends AppCompatActivity {
         binding.messageRecView.setLayoutManager(layoutManager);
 
         final String senderRoom = senderId + receiverId;
-        final String receiverRoom = senderId + receiverId;
+        final String receiverRoom = receiverId + senderId;
 
         database.getReference().child("Chats")
                 .child(senderRoom)
@@ -77,6 +77,8 @@ public class Chat_Detail extends AppCompatActivity {
 
                            messagesModel.add(model);
                         }
+                        messageAdapter.notifyDataSetChanged();
+
 
                     }
 
@@ -108,8 +110,12 @@ public class Chat_Detail extends AppCompatActivity {
 
                             }
                         });
+
                     }
                 });
+
+
+
 
             }
         });
