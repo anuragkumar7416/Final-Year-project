@@ -2,10 +2,11 @@ package com.example.finalyearproject.Models;
 
 public class mentees {
 
-    String name, phoneNo,email,password, profilePic,workBackground;
+    String name, phoneNo,email,password, profilePic,workBackground,userId;
 
 
     public mentees() {
+
     }
 
     public mentees(String name, String phoneNo, String email, String password) {
@@ -61,5 +62,13 @@ public class mentees {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUserId(String key) {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

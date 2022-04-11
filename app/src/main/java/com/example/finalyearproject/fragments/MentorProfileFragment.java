@@ -82,6 +82,7 @@ public class MentorProfileFragment extends Fragment {
                         binding.userEmail.setText(mentors.getEmail());
                         binding.userPhoneNo.setText(mentors.getPhoneNo());
                         binding.userName.setText(mentors.getName());
+                        binding.workBackground.setText(mentors.getWorkBackground());
 
                     }
 
