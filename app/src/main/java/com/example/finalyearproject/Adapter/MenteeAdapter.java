@@ -12,8 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.finalyearproject.Chat_Detail;
-import com.example.finalyearproject.MentorProfile;
-import com.example.finalyearproject.Models.Mentors;
 import com.example.finalyearproject.Models.mentees;
 import com.example.finalyearproject.R;
 
@@ -55,7 +53,7 @@ public class MenteeAdapter extends RecyclerView.Adapter<MenteeAdapter.MessageVie
             public void onClick(View v) {
 
                 Intent intent = new Intent(context, Chat_Detail.class);
-                intent.putExtra("userId",mentee.getName());
+                intent.putExtra("userId",mentee.getUserId());
                 intent.putExtra("userEmail",mentee.getEmail());
                 intent.putExtra("userName",mentee.getName());
                 intent.putExtra("workBackground",mentee.getWorkBackground());

@@ -56,6 +56,14 @@ public class mentees {
         this.workBackground = workBackground;
     }
 
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
     public String getName() {
         return name;
     }
@@ -64,11 +72,5 @@ public class mentees {
         this.name = name;
     }
 
-    public String getUserId(String key) {
-        return userId;
-    }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
 }

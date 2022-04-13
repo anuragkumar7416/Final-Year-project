@@ -3,12 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/activity_mentor_profile.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/fragment_mentor_chat.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/fragment_mentor_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/sample.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Anurag/AndroidStudioProjects/FinalYearProject/app/src/main/res/layout/view_sample.xml" value="0.20416666666666666" />
-        <entry key="app/src/main/res/layout/activity_chat_detail.xml" value="0.10612968591691996" />
+        <entry key="app/src/main/res/layout/activity_chat_detail.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_categories.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/fragment_mentor_chat.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/sample_reciever.xml" value="0.1" />
         <entry key="app/src/main/res/layout/sample_sender.xml" value="0.1" />
         <entry key="app/src/main/res/layout/view_sample.xml" value="0.1" />

@@ -62,7 +62,7 @@ public class MentorChatFragment extends Fragment {
                 list.clear();
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
                     mentees mentee = dataSnapshot.getValue(mentees.class);
-                    mentee.getUserId(dataSnapshot.getKey());
+                    mentee.setUserId(dataSnapshot.getKey());
                     list.add(mentee);
                 }
                 adapter.notifyDataSetChanged();

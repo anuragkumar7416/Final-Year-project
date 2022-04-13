@@ -12,7 +12,8 @@
         android:id="@+id/messageRecView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar" />
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="-58dp" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -94,7 +95,7 @@
             android:layout_width="200dp"
             android:layout_height="55dp"
             android:background="@drawable/background_chat"
-            android:layout_marginStart="3dp"
+            android:layout_marginStart="5dp"
             android:padding="10dp"
             android:layout_weight="2"
             android:hint="@string/enter_your_message"/>
@@ -104,8 +105,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="5dp"
+            app:backgroundTint="@color/colorPrimary"
             android:src="@drawable/ic_baseline_send_24"
             app:tint="@color/white" />
     </LinearLayout>
