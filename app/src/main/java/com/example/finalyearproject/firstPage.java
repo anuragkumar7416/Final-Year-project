@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.example.finalyearproject.databinding.ActivityFirstPageBinding;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class firstPage extends AppCompatActivity {
 
@@ -21,6 +22,8 @@ public class firstPage extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         auth = FirebaseAuth.getInstance();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        //String email = auth.getCurrentUser().getEmail();
 
 
         binding.btMentee.setOnClickListener(new View.OnClickListener() {
@@ -39,9 +42,20 @@ public class firstPage extends AppCompatActivity {
             }
         });
 
-       if(auth.getCurrentUser()!=null){
-           Intent intent = new Intent(firstPage.this,MainActivity.class);         startActivity(intent);
-           finish();
+       if(user!=null){
+           String userEmail = user.getEmail();
+           if(userEmail.contains("@mentor.com")){
+               Intent intent = new Intent(firstPage.this,Mentor_Home.class);
+               startActivity(intent);
+               finish();
+
+           }else{
+               Intent intent = new Intent(firstPage.this,MainActivity.class);
+               startActivity(intent);
+               finish();
+
+           }
+
         }
     }
 
