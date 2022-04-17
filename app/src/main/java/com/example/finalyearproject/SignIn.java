@@ -98,6 +98,13 @@ public class SignIn extends AppCompatActivity {
             }
         });
 
+        binding.forgotBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignIn.this,ForgotPassword.class));
+            }
+        });
+
         binding.btGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -8,17 +8,19 @@
     android:layout_marginLeft="5dp"
     android:layout_marginEnd="7dp"
     android:layout_marginRight="7dp"
+    android:layout_marginTop="4dp"
     android:background="@drawable/bg_recevier"
     android:maxWidth="310dp"
     android:maxHeight="400dp"
     android:minWidth="30dp"
-    android:minHeight="30dp">
+   >
 
     <TextView
         android:id="@+id/recieverText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:layout_marginRight="5dp"
         android:inputType="textLongMessage|textMultiLine"
         android:maxWidth="270dp"
         android:minWidth="50dp"
@@ -34,6 +36,7 @@
         android:layout_marginRight="4dp"
         android:layout_marginBottom="3dp"
         android:text="12:00 p.m"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

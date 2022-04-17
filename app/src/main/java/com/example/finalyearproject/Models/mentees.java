@@ -2,18 +2,20 @@ package com.example.finalyearproject.Models;
 
 public class mentees {
 
-    String name, phoneNo,email,password, profilePic,workBackground,userId;
+    String name, phoneNo,email,password, profilePic,workBackground,userId,dob,gender;
 
 
     public mentees() {
 
     }
 
-    public mentees(String name, String phoneNo, String email, String password) {
+    public mentees(String name, String phoneNo, String email, String password,String dob,String gender) {
         this.name = name;
         this.phoneNo = phoneNo;
         this.email = email;
         this.password = password;
+        this.dob = dob;
+        this.gender = gender;
     }
 
     public String getPhoneNo() {
@@ -72,5 +74,19 @@ public class mentees {
         this.name = name;
     }
 
+    public String getDob() {
+        return dob;
+    }
 
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 }

@@ -66,6 +66,8 @@ public class Chat_Detail extends AppCompatActivity {
         final String senderRoom = senderId + receiverId;
         final String receiverRoom = receiverId + senderId;
 
+
+
         database.getReference().child("Chats")
                 .child(senderRoom)
                 .addValueEventListener(new ValueEventListener() {
@@ -119,5 +121,13 @@ public class Chat_Detail extends AppCompatActivity {
 
             }
         });
+
+        binding.backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
     }
 }

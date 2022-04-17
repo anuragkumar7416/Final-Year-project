@@ -52,7 +52,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Anurag Kumar"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -104,7 +103,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:padding="5dp"
-                            android:text="you@gmail.com"
                             android:textSize="15sp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -158,7 +156,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:padding="5dp"
-                            android:text="9988776655"
                             android:textSize="15sp" />
                     </LinearLayout>
                 </LinearLayout>
