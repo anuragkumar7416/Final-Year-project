@@ -7,60 +7,71 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.finalyearproject.R;
+import com.example.finalyearproject.databinding.FragmentCategoriesBinding;
+import com.example.finalyearproject.databinding.FragmentMentorHomeBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MentorHomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import org.jitsi.meet.sdk.JitsiMeetActivity;
+import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class MentorHomeFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+
 
     public MentorHomeFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MentorHomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MentorHomeFragment newInstance(String param1, String param2) {
-        MentorHomeFragment fragment = new MentorHomeFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    FragmentMentorHomeBinding binding;
+    EditText secretCodeBox;
+    Button joinBtn, shareBtn;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mentor_home, container, false);
+        binding = FragmentMentorHomeBinding.inflate(inflater,container,false);
+        secretCodeBox = binding.codeBox;
+        joinBtn = binding.joinBtn;
+        shareBtn = binding.shareBtn;
+
+
+        try{
+            JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
+                    .setServerURL(new URL("https:/meet.jit.si"))
+
+                    .setAudioOnly(true)
+                    .setWelcomePageEnabled(false)
+                    .build();
+        }catch (MalformedURLException e){
+            e.printStackTrace();
+        }
+
+        joinBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if (secretCodeBox.getText().toString().isEmpty()) {
+                    Toast.makeText(getActivity(), "Please Enter The Code", Toast.LENGTH_SHORT).show();
+                } else {
+                    JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
+                            .setRoom(secretCodeBox.getText().toString())
+                            .setWelcomePageEnabled(false)
+                            .build();
+                    JitsiMeetActivity.launch(getActivity(),options);
+                }
+            }
+        });
+
+        return binding.getRoot();
     }
 }

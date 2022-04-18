@@ -66,32 +66,8 @@ public class Mentor_Home extends AppCompatActivity {
             }
         });
 
-//        secretCodeBox = findViewById(R.id.codeBox);
-//        joinBtn = findViewById(R.id.joinBtn);
-//        shareBtn = findViewById(R.id.shareBtn);
-//
-//        joinBtn.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v){
-//                if(secretCodeBox.getText().toString().isEmpty()){
-//                    Toast.makeText(Mentor_Home.this,"Please Enter The Code",Toast.LENGTH_SHORT).show();
-//                }else{
-//                    try{
-//                        JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
-//                                .setServerURL(new URL("https:/meet.jit.si"))
-//                                .setRoom(secretCodeBox.getText().toString())
-//                                .setAudioOnly(true)
-//                                .setWelcomePageEnabled(false)
-//                                .build();
-//
-//                        JitsiMeetActivity.launch(Mentor_Home.this,options);
-//
-//                    }catch (MalformedURLException e){
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
-//        });
+
+
 
 
     }

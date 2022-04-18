@@ -14,7 +14,9 @@ import com.example.finalyearproject.Models.Message;
 import com.example.finalyearproject.R;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MessageAdapter extends RecyclerView.Adapter {
 
@@ -64,9 +66,15 @@ public class MessageAdapter extends RecyclerView.Adapter {
         Message message = messages.get(position);
         if(holder.getClass() == SenderViewHolder.class){
             ((SenderViewHolder)holder).senderMsg.setText(message.getMessage());
+            SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm a");
+            long time = message.getTimestamp();
+            ((SenderViewHolder)holder).senderTime.setText(dateFormat.format(new Date(time)));
         }
         else {
             ((RecieverViewHolder)holder).recieverMsg.setText(message.getMessage());
+            SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm a");
+            long time = message.getTimestamp();
+            ((RecieverViewHolder)holder).recieverTime.setText(dateFormat.format(new Date(time)));
 
         }
 

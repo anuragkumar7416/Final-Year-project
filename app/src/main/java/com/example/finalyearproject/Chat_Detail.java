@@ -93,6 +93,10 @@ public class Chat_Detail extends AppCompatActivity {
         binding.btSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if(binding.etMessage.getText().toString().isEmpty()){
+                    return;
+                }
                 String typedMessage = binding.etMessage.getText().toString();
                 final Message model = new Message(senderId,typedMessage);
                 model.setTimestamp(new Date().getTime());
