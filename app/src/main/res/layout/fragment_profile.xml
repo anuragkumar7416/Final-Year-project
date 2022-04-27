@@ -193,21 +193,24 @@
                             android:textStyle="bold" />
 
                         <ImageView
-                            android:id="@+id/imageView6"
+                            android:id="@+id/addInfoBt1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="7dp"
                             android:layout_marginRight="10dp"
-                            android:layout_toLeftOf="@id/textView4"
+                            android:layout_toLeftOf="@id/addInfoBt"
                             android:src="@drawable/ic_baseline_add_circle_outline_24" />
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/addInfoBt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
-                            android:layout_margin="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
                             android:text="Add Information"
                             android:textColor="#3040D2"
                             android:textStyle="bold" />
@@ -232,6 +235,7 @@
                             android:src="@drawable/ic_book_bag_portfolio_svgrepo_com" />
 
                         <TextView
+                            android:id="@+id/userWorkBackground"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"

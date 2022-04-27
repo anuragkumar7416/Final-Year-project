@@ -1,5 +1,7 @@
 package com.example.finalyearproject;
 
+import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -43,6 +45,7 @@ public class SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getSupportActionBar().hide();
 
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
@@ -69,8 +72,13 @@ public class SignIn extends AppCompatActivity {
                                     Boolean flag = firebaseUser.isEmailVerified();
                                     if(flag){
                                         Intent intent = new Intent(SignIn.this,MainActivity.class);
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                        intent.putExtra("EXIT", true);
                                         startActivity(intent);
                                         finish();
+
                                     }
                                     else{
                                         Toast.makeText(getApplicationContext(), "Your email is not verified!!.Please verify your Email", Toast.LENGTH_LONG).show();

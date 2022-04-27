@@ -1,8 +1,12 @@
 package com.example.finalyearproject.fragments;
 
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.browser.customtabs.CustomTabColorSchemeParams;
+import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,9 +15,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.example.finalyearproject.Adapter.NewsAdapter;
 import com.example.finalyearproject.Adapter.recyclerViewAdapter;
 import com.example.finalyearproject.Models.Mentors;
+import com.example.finalyearproject.Models.News;
 import com.example.finalyearproject.Models.mentees;
+import com.example.finalyearproject.MySingleton;
 import com.example.finalyearproject.R;
 import com.example.finalyearproject.databinding.FragmentHomeBinding;
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,7 +34,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class HomeFragment extends Fragment {
@@ -35,6 +53,7 @@ public class HomeFragment extends Fragment {
     ArrayList<Mentors> list = new ArrayList<>();
     FirebaseAuth auth;
     FirebaseDatabase database;
+    NewsAdapter mAdapter;
 
 
     @Override
@@ -42,6 +61,14 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false);
+
+
+        binding.recNews.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        fetchdata();
+        mAdapter = new NewsAdapter(this::onItemClicked);
+        binding.recNews.setAdapter(mAdapter);
+
 
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
@@ -76,5 +103,64 @@ public class HomeFragment extends Fragment {
 
 
         return binding.getRoot();
+    }
+
+    private void fetchdata() {
+
+        String url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=3ba2909f6b3247b1b4b21d89a9f7e5b0";
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray jsonArray = response.getJSONArray("articles");
+                    ArrayList<News> newsArrayList = new ArrayList<>();
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject newsJsonObject = jsonArray.getJSONObject(i);
+                        News news = new News(newsJsonObject.getString("title"), newsJsonObject.getString("author"), newsJsonObject.getString("url"), newsJsonObject.getString("urlToImage"));
+
+                        newsArrayList.add(news);
+                    }
+                    mAdapter.updateNews(newsArrayList);
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }
+        )
+        {
+
+            @Override
+            public Map<String, String> getHeaders () throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("User-Agent", "Mozilla/5.0");
+                return headers;
+            }
+        };
+
+        MySingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
+    }
+
+
+    public void onItemClicked(News item) {
+
+
+        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+        CustomTabColorSchemeParams defaultColors = new CustomTabColorSchemeParams.Builder()
+                .setToolbarColor(Color.parseColor("#E53935"))
+                .build();
+        builder.setDefaultColorSchemeParams(defaultColors);
+        CustomTabsIntent customTabsIntent = builder.build();
+        customTabsIntent.intent.setPackage("com.android.chrome");
+        customTabsIntent.launchUrl(getContext(), Uri.parse(item.getUrl()));
+
+
     }
 }

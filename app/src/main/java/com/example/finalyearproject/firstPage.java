@@ -21,6 +21,8 @@ public class firstPage extends AppCompatActivity {
         binding = ActivityFirstPageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        getSupportActionBar().hide();
+
         auth = FirebaseAuth.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         //String email = auth.getCurrentUser().getEmail();

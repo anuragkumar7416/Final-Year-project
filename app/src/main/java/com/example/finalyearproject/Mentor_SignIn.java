@@ -31,6 +31,7 @@ public class Mentor_SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMentorSignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getSupportActionBar().hide();
 
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
@@ -52,9 +53,12 @@ public class Mentor_SignIn extends AppCompatActivity {
                                 if(task.isSuccessful()){
                                     progressDialog.dismiss();
                                     Intent intent = new Intent(Mentor_SignIn.this,Mentor_Home.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    intent.putExtra("EXIT", true);
                                     startActivity(intent);
                                     finish();
-
                                 } else {
 
                                     Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_LONG).show();

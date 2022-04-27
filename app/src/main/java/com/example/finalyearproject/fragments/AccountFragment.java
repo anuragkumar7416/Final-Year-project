@@ -18,6 +18,7 @@ import com.bumptech.glide.Glide;
 import com.example.finalyearproject.Models.mentees;
 import com.example.finalyearproject.R;
 import com.example.finalyearproject.SignIn;
+import com.example.finalyearproject.WorkBackground;
 import com.example.finalyearproject.databinding.FragmentHomeBinding;
 import com.example.finalyearproject.databinding.FragmentProfileBinding;
 import com.example.finalyearproject.firstPage;
@@ -56,6 +57,23 @@ public class AccountFragment extends Fragment {
         database = FirebaseDatabase.getInstance();
         storage = FirebaseStorage.getInstance();
 
+        binding.addInfoBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getActivity(), WorkBackground.class));
+
+            }
+        });
+
+        binding.addInfoBt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), WorkBackground.class));
+
+            }
+        });
+
         binding.logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,6 +99,7 @@ public class AccountFragment extends Fragment {
                 binding.userEmail.setText(mentee.getEmail());
                 binding.userPhoneNo.setText(mentee.getPhoneNo());
                 binding.userName.setText(mentee.getName());
+                binding.userWorkBackground.setText(mentee.getWorkBackground());
 
             }
 
