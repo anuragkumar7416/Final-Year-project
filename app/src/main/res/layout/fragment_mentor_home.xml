@@ -105,17 +105,7 @@
                         android:text="Join"
                         android:textColor="@android:color/white" />
 
-                    <Button
-                        android:id="@+id/shareBtn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:drawablePadding="20dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp"
-                        android:text="Share"
-                        android:textColor="@android:color/white" />
+
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>

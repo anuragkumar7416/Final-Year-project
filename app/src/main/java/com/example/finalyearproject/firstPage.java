@@ -44,21 +44,7 @@ public class firstPage extends AppCompatActivity {
             }
         });
 
-       if(user!=null){
-           String userEmail = user.getEmail();
-           if(userEmail.contains("@mentor.com")){
-               Intent intent = new Intent(firstPage.this,Mentor_Home.class);
-               startActivity(intent);
-               finish();
 
-           }else{
-               Intent intent = new Intent(firstPage.this,MainActivity.class);
-               startActivity(intent);
-               finish();
-
-           }
-
-        }
     }
 
 }
